@@ -1,0 +1,58 @@
+{% if data %}
+    <ul>
+         ID : {{ data.id }}
+         <br></br>
+         Title : <a href={{ data.url }}> {{ data.title }} </a>
+         <br></br>
+         목표 :{{ data.subject }}
+         <br></br>
+         요청구분 : {{ data.gubun }}
+         <br></br>
+         요청업무 : {{ data.detail }}
+         <br></br>
+         {% if data.ksmgee %}
+         예상성과 : 
+         <ul>
+         <table border='1'>
+             <tr>
+                 <th>연도</th>
+                 <th>매출</th>
+                 <th>원가절감</th>
+                 <th>생산성향상</th>
+                 <th>불량률</th>
+                 <th>기타</th>
+             </tr>
+         {% for effect_data in data.ksmgee %}
+             <tr>
+                 <td>{{ effect_data.year }}</td>
+                 <td>{{ effect_data.sales }}</td>
+                 <td>{{ effect_data.cost_save }}</td>
+                 <td>{{ effect_data.productivity }}</td>
+                 <td>{{ effect_data.quality }}</td>
+                 <td>{{ effect_data.etc }}</td>
+             </tr>
+         {% endfor %}
+         </table>
+         </ul>
+         {% endif %}
+         <br></br>
+         기존기대효과(정량적) : {{ data.expect_effect_asis }}
+         <br></br>
+         개선기대효과(정성적) : {{ data.expect_effect_tobe }}
+         <br></br>
+         요청자 : {{ data.request_user }}
+         <br></br>
+         요청일자 : {{ data.created_dt }}
+         <br></br>
+         요청확인 : {{ data.request_confirm }}
+         <br></br>
+         요청확인내용 : {{ data.request_confirm_detail }}
+         <br></br>
+         다음작업자 : {{ data.next_user }}
+         <br></br>
+    </table>
+    </ul>
+{% else %}
+    <p>No snippets are available.</p>
+{% endif %}
+
