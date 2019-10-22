@@ -69,7 +69,7 @@ paramiko==2.4.2
 passlib==1.6.5
 pbr==5.1.3
 pexpect==4.0.1
-Pillow==3.1.2
+Pillow==6.2.0
 pipenv==2018.11.26
 piston-mini-client==0.7.5
 psutil==3.4.2
