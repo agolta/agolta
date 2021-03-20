@@ -54,7 +54,7 @@ idna==2.0
 invoke==1.2.0
 itsdangerous==0.24
 itypes==1.1.0
-Jinja2==2.8
+Jinja2==2.11.3
 kazam==1.4.5
 louis==2.6.4
 lxml==3.5.0
