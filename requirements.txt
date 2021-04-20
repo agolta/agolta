@@ -114,6 +114,6 @@ virtkey==0.63.0
 virtualenv==16.4.3
 virtualenv-clone==0.5.1
 virtualenvwrapper==4.8.4
-Werkzeug==0.10.4
+Werkzeug==0.15.3
 WTForms==2.1
 xkit==0.0.0
